@@ -4,7 +4,7 @@
 yum update -y
 
 # disable selinux
-sed s/enforcing/disabled/ /etc/selinux/config > /etc/selinux/config
+sed -i s/enforcing/disabled/ /etc/selinux/config
 
 # disable firewall
 systemctl stop firewalld.service
