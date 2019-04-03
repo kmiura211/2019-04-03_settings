@@ -43,6 +43,8 @@ yum install samba samba-client samba-common -y
 mv /etc/samba/smb.conf /etc/samba/smb.conf.bk
 touch /etc/samba/smb.conf
 
+# pdbedit -a root
+
 cat <<EOF > /etc/samba/smb.conf
 [global]
 workgroup = MYGROUP
