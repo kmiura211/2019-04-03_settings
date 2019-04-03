@@ -45,6 +45,9 @@ security = user
 passdb backend = tdbsam
 load printers = yes
 cups options = raw
+dos charset = CP932
+unix charset = UTF8
+display charset = UTF8
 
 [homes]
 comment = Home Directories
