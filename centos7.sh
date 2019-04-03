@@ -50,8 +50,6 @@ cat <<EOF > /etc/samba/smb.conf
 workgroup = MYGROUP
 server string = Samba Server Version %v
 netbios name = MYSERVER
-log file = /var/log/samba/log.%m
-max log size = 50
 security = user
 passdb backend = tdbsam
 load printers = yes
