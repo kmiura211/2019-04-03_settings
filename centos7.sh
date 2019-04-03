@@ -34,6 +34,11 @@ yum install mysql-community-server -y
 systemctl start mysqld.service
 systemctl enable mysqld.service
 
+# cat /var/log/mysqld.log | grep "temporary password" | awk {'print $NF'}
+# mysql -u root -proot "SET GLOBAL validate_password_length=4;"
+# mysql -u root -proot "SET GLOBAL validate_password_policy=LOW;"
+# mysql -u root -proot "SET PASSWORD FOR root@localhost=PASSWORD('root');"
+
 # install samba
 yum install samba samba-client samba-common -y
 
