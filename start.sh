@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#
+# update packages
 yum update -y
 
 # disable selinux
