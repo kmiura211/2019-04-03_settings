@@ -19,6 +19,8 @@ systemctl enable httpd.service
 yum install epel-release -y
 rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 yum install --enablerepo=remi,remi-php73 php php-devel php-mbstring php-pdo php-mysql php-gd php-xml php-mcrypt -y
+echo 'extension=pdo.so' >> /etc/php.ini
+echo 'extension=pdo_mysql.so' >> /etc/php.ini
 
 # install composer
 curl -sS https://getcomposer.org/installer | php
